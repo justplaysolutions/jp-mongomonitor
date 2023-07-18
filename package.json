@@ -1,14 +1,14 @@
 {
-  "name": "mongomonitor",
+  "name": "jp-mongomonitor",
   "version": "1.0.4",
   "description": "Constantly monitors your MongoDB replica set to keep it healthy.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eladnava/mongomonitor.git"
+    "url": "https://github.com/justplaysolutions/jp-mongomonitor.git"
   },
   "bin": {
-    "mongomonitor": "./index.js"
+    "jp-mongomonitor": "./index.js"
   },
   "author": "Elad Nava",
   "license": "Apache-2.0",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/eladnava/mongomonitor#readme",
   "dependencies": {
-    "@slack/client": "^3.9.0",
+    "@slack/webhook": "^6.1.0",
     "co": "^4.6.0",
     "co-mongodb": "^0.1.0",
     "commander": "^2.9.0",

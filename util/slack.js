@@ -1,6 +1,6 @@
 'use strict';
 
-const IncomingWebhook = require('@slack/client').IncomingWebhook;
+const { IncomingWebhook } = require('@slack/webhook');
 
 function Slack(slackConfig) {
     this.config = slackConfig;
@@ -17,14 +17,14 @@ Slack.prototype.sendWebhookMessage = function (subject, error) {
     const self = this;
     return new Promise(function (resolve, reject) {
         const messageBody = self.generateMessage(subject, error);
-        self.webhook.send(messageBody, function (err, res) {
-            if (err) {
-                reject(err);
+        (async () => {
+            try {
+              const reply = await self.webhook.send(messageBody);
+              resolve(reply);
+            } catch (error) {
+              reject(error);
             }
-            else {
-                resolve(res);
-            }
-        });
+        })();
     });
 };
 
