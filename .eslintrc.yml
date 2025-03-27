@@ -1,0 +1,25 @@
+extends: airbnb
+parserOptions:
+  ecmaVersion: 2017
+# Added globals for Notifications, moment and Modal as they all seem to not require imports. 
+# Future change would be to remove these and add imports to the files that require them.
+globals:
+  Notifications: true
+  moment: true
+  Modal: true
+rules:
+  radix: ["error", "as-needed"]
+  prefer-destructuring: ["off"]
+  no-underscore-dangle: ["off"]
+  no-continue: ["off"]
+  indent: ["error", 2, { "MemberExpression": 0 }]
+  max-len: ["warn", 125]
+  brace-style: ["error", "stroustrup"]
+  comma-dangle: [2, 'never']
+  no-plusplus: 0
+  arrow-parens: ['error', 'as-needed', { "requireForBlockBody": true}]
+  no-param-reassign: 0
+  no-console: 0
+  no-mixed-operators: 0
+  consistent-return: 0
+  "import/extensions": ["error", "ignorePackages"]

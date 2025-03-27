@@ -1,0 +1,18 @@
+{
+    "database": "justplay-dev",
+    "members": [
+        "127.0.0.1:30001"
+    ],
+    "auth": {
+
+    },
+    "preferredPrimaryMember": "mongo0:27017",
+    "interval": 30,
+    "minReplicaSetMembers": 1,
+    "maxHeartbeatThreshold": 3,
+    "maxReplicationDelay": 45,
+    "minOplogLength": 60,
+    "maxMongodMemory": 8,
+    "alertOnRemainingStoragePer": 10
+
+}
