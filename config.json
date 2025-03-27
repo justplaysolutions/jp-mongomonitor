@@ -14,5 +14,4 @@
     "minOplogLength": 60,
     "maxMongodMemory": 8,
     "alertOnRemainingStoragePer": 10
-
 }
